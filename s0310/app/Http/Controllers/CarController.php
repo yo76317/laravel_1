@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
+
 class CarController extends Controller
 {
     /**
@@ -32,6 +34,11 @@ class CarController extends Controller
 
     public function index()
     {
+        $users=DB::select('select * from users');
+        dd($users);
+        
+
+        return view ('user.index',['users'=>$users]);
 
         // echo "A";
         // return view('car.index');
@@ -63,7 +70,8 @@ class CarController extends Controller
      */
     public function create()
     {
-       return view('car.create');
+       
+        return view('car.create');
     }
 
     /**
