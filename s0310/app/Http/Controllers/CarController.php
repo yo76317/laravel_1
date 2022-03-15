@@ -15,7 +15,8 @@ class CarController extends Controller
      */
 
     //  自定義myForm
-    public function myForm(Request $request){
+    public function myForm(Request $request)
+    {
         // echo 'hello myForm';
 
         // $input = $request->all();
@@ -28,17 +29,20 @@ class CarController extends Controller
         dd($input);
     }
 
-    public function test(){
+    public function test()
+    {
         echo 'hello test';
     }
 
     public function index()
     {
-        $users=DB::select('select * from users');
-        dd($users);
-        
-
-        return view ('user.index',['users'=>$users]);
+        $data = DB::select('select * from users');
+        // foreach ($data as $user) {
+        //     echo $user->name . "<br>";
+        // }
+        // dd($users);
+        // return view('user.index', ['users' => $users]);
+        return view('car.index', ['data' => $data]);
 
         // echo "A";
         // return view('car.index');
@@ -47,7 +51,7 @@ class CarController extends Controller
         // return view('car.index',['math'=>'91']);
         // return view('car.index',['english'=>'92']);
 
-        $data =[
+        $data = [
             'id' => '1',
             'name' => 'yo',
             'chinese' => '80',
@@ -58,9 +62,7 @@ class CarController extends Controller
         $data['avg'] = '80';
 
         // dd($data);
-        return view('car.index',['data' => $data]);
-        
-        
+        return view('car.index', ['data' => $data]);
     }
 
     /**
@@ -70,7 +72,7 @@ class CarController extends Controller
      */
     public function create()
     {
-       
+
         return view('car.create');
     }
 
@@ -83,8 +85,8 @@ class CarController extends Controller
     public function store(Request $request)
     {
         echo "hello cars store";
-    $input = $request->all();
-    dd($input);
+        $input = $request->all();
+        dd($input);
     }
 
     /**

@@ -5,19 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <style>
       div{margin:20px;}
     </style>
   </head>
 
 <body>
-  <div>
-    <h2>hellocar blade</h2>
-    <br><br>
-    <a href="{{route('cars.create')}}">單筆新增</a>
-    <br><br>
+  <div class="container">
 
+    @foreach ($data as $oneData)
+      <p>This is user {{ $oneData->name }}</p>
+    @endforeach
+
+    <h2>car index blade</h2>
+    <br>
+    <a href="{{route('cars.create')}}">單筆新增</a>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">name</th>
+          <th scope="col">email</th>
+        </tr>
+      </thead>
     
+      <tbody>
+        <tr>
+          <th scope="row">{{$oneData->id}}</th>
+          <td>{{$oneData->name}}</td>
+          <td>{{$oneData->email}}}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    @php
+    dd($data);
+    @endphp
 
   </div>
 </body>
