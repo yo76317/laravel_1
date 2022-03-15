@@ -18,9 +18,27 @@ INSERT INTO
   )
 VALUES
   (
-    '1',
-    '陳佑青-1',
-    'yo76317-1@yahoo.com.tw',
+    '4',
+    '陳佑青-4',
+    'yo76317-4@yahoo.com.tw',
+    NULL,
+    '123',
+    NULL,
+    NULL
+  ),
+    (
+    '5',
+    '陳佑青-5',
+    'yo76317-5@yahoo.com.tw',
+    NULL,
+    '123',
+    NULL,
+    NULL
+  ),
+    (
+    '6',
+    '陳佑青-6',
+    'yo76317-6@yahoo.com.tw',
     NULL,
     '123',
     NULL,

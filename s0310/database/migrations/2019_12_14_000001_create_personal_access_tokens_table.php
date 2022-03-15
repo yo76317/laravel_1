@@ -12,7 +12,7 @@ class CreatePersonalAccessTokensTable extends Migration
      * @return void
      */
 
-     // 刪除資料庫某個欄位
+     // 
     public function up()
     {
         Schema::create('personal_access_tokens', function (Blueprint $table) {
