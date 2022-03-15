@@ -23,8 +23,6 @@ Route::resource('photos',PhotoController::class);
 Route::get('/cars_get_form',[CarController::class,'myForm'])->name('cars.myform123');
 Route::post('/cars_get_form',[CarController::class,'myForm'])->name('cars.myform123');
 
-
-
-route::get('/',function(){
+Route::get('/',function(){
     return view('greeting',['name' => 'yo1']);
 });

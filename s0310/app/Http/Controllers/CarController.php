@@ -32,6 +32,7 @@ class CarController extends Controller
 
     public function index()
     {
+
         // echo "A";
         // return view('car.index');
         // return view('car.index',['name'=>'yo']);
@@ -73,6 +74,7 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
+        echo "hello cars store";
     $input = $request->all();
     dd($input);
     }

@@ -11,11 +11,12 @@
         <h2>單筆新增</h2>
         <hr>
         <p></p>
-        <form action="{{route('cars.myform123')}}" method="get">
-            {{-- @csrf  --}}
+        {{-- <form action="{{route('cars.myform123')}}" method="post"> --}}
+        <form action="{{route('cars.store')}}" method="post">
+            @csrf 
             {{-- 等同下列 --}}
             {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}" /> --}}
-            <input type="hidden" name="_token" value="123" />
+            {{-- <input type="hidden" name="_token" value="123" /> --}}
 
             <table class="table table-striped">
                 <thead>
